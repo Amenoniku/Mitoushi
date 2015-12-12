@@ -41,6 +41,10 @@ git clone https://github.com/Amenoniku/Mitoushi.git
 ```
  npm i
 ```
+##### Установка CoffeeScript глобально
+```
+ npm i -g coffee-script
+```
 
 * Для теста БД раскомментировать в файле core/app.coffee стоку 19 `require "./database"`
 
