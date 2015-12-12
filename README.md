@@ -37,7 +37,7 @@ git clone https://github.com/Amenoniku/Mitoushi.git
 - Перейти по [ссылке](https://www.mongodb.org/downloads#production) и скачать под нужную ОС
 - Установить mongo и запустить по [инструкции(для Windows)](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/#install-mongodb)
 
-##### Установка зависимости:
+##### Установка зависимостей
 ```
  npm i
 ```
