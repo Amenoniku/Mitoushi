@@ -42,7 +42,7 @@ git clone https://github.com/Amenoniku/Mitoushi.git
  npm i
 ```
 
-* Для теста БД раскомментируйте в core/app.coffee стоку 19 `require "./database"`
+* Для теста БД раскомментировать в файле core/app.coffee стоку 19 `require "./database"`
 
 ##### Запуск Проекта:
 ```
