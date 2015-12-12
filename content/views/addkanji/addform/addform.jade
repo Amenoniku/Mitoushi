@@ -1,0 +1,47 @@
+mixin addform()
+	form(id="newGlyph ", name="newGlyph", method="POST", action="/newglyph", enctype="multipart/form-data")
+		filedset
+			.form-group
+				label(for='glyph') Иероглиф
+				input#glyph.form-control(type="text", name="glyph", required)
+			.form-group
+				label(for='romaji') Одно из чтений на Ромадзи (для картинки)
+				input#glyph.form-control(type="text", name="romaji", required)
+			.form-group
+				p 
+					strong Картинки
+				label(for='images.static') Статичные Картинки
+				input#images.static.form-control(type="file", accept="image/*", name="images.static")
+				input#images.static.form-control(type="file", accept="image/*", name="images.static")
+			.form-group
+				label(for='images.steps') Пошаговые картинки
+				input#images.steps.form-control(type="file", accept="image/*", name="images.steps")
+				button#addVal.btn.btn-primary(type="button") Добавить значение
+			.form-group
+				label(for='JLPT') Уровень JLPT
+				input#jlpt.form-control(type="text", name="JLPT", required)
+			.form-group
+				label(for='glyphKey') Иероглиф ключ
+				input#glyphkey.form-control(type="text", name="glyphKey", required)
+			.form-group
+				label(for='quanLine') Количество черт
+				input#quanLine.form-control(type="text", name="quanLine", required)
+			.form-group
+				label(for='extraLine') Доп черты
+				input#extraLine.form-control(type="text", name="extraLine", required)
+			.form-group
+				label(for='value') Значение
+				input#value.form-control(type="text", name="value", required)
+			.form-group
+				label(for='onYomi') Он Ёми
+				input#onYomi.form-control.kanjiReading(type="text", name="onYomi")
+				button#addVal.btn.btn-primary(type="button") Добавить значение
+			.form-group
+				label(for='kunYomi') Кун Ёми
+				input#kunYomi.form-control.kanjiReading(type="text", name="kunYomi")
+				button#addVal.btn.btn-primary(type="button") Добавить значение
+			.form-group
+				button.btn.btn-primary(type="submit") Сохранить
+				button.btn.btn-primary(type="reset") Очистить
+
+	p.error

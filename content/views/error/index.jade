@@ -1,0 +1,12 @@
+extends ../layout/index
+
+block content
+	.error
+		if error
+			h2 Ошибка: #{error.status}
+			h1= error.message
+			pre= error.stuck
+		else
+			h2 Ошибка: #{status}
+			h1= message
+			pre #{stack}

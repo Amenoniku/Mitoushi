@@ -1,0 +1,17 @@
+include wrapper/wrapper
+include header/header
+include main/main
+include footer/footer
+include scripts/scripts
+
+- var scripts = ["vendor.js", "app.min.js"]
+
+doctype html
+html(lang="ru")
+	include head/head
+	body
+		+wrapper()
+			+header()
+			+main()
+			+footer()
+		+scripts(scripts)

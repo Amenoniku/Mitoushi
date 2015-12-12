@@ -1,0 +1,24 @@
+extends ../layout/index
+
+include auth/auth
+
+block content
+	if auth
+		+authForm()
+	if users
+		-for (var i = 0; i < users.length; i++)
+			p Имя: #{users[i].username}
+			p Права: #{users[i].right}
+				if superAdmin
+					form(id="updateRight", method="POST", action="users/upright")
+						input(type="text", value="#{users[i].id}", name="id", hidden)
+						select(name="right")
+							option(value="newbie") Новичек
+							option(value="admin") Админ
+						button(type="submit") Go!
+			p Дата регистрации: #{users[i].created}
+			if superAdmin
+				form(id="removeUser", method="POST", action="users/remove")
+					input(type="text", value="#{users[i].id}", name="id", hidden)
+					button(type="submit", ) Удалить Пользователя
+			hr

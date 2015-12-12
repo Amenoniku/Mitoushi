@@ -1,0 +1,11 @@
+include ../logo/logo
+include ../title/title
+include ../menu/menu
+
+mixin header()
+	.header
+		+logo()
+
+		.header__title
+			+title()
+		+menu()

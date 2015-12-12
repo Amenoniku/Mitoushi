@@ -1,0 +1,22 @@
+{
+	"port": 8000,
+	"mongoose": {
+		"uri": "mongodb://localhost:27017/mitoushi",
+		"options": {
+			"server": {
+				"socketOptions": {
+					"keepAlive": 1
+				}
+			}
+		}
+	},
+	"session": {
+		"secret": "e7ierk9r42dfc89tedg86iykh",
+		"key": "sid",
+		"cookie": {
+			"path": "/",
+			"httpOnly": true,
+			"maxAge": null
+		}
+	}
+}

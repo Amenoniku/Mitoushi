@@ -1,0 +1,14 @@
+mixin menu()
+	.menu
+		nav
+			ul
+				li: a(href="/") Главная
+				li: a(href="/modKanji") Добавить Иероглив
+				li: a(href="/users") Пользователи
+				if user
+					li: form(id="logout", method="POST", action="/users/logout")
+						button.btn(type="submit", name="logout") Выйти
+					li
+						p= user.username
+				else
+					li: a(href="/users/auth") Вход

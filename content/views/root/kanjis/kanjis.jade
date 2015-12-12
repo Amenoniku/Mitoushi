@@ -1,0 +1,14 @@
+mixin kanjis()
+	h1= title
+	#content.content
+		#card
+		table#allKanji.allKanji
+			tr
+		if user && user.right != "newbie"
+			#blockChangeKanji(hidden)
+				input(id="_id" type="text", value="", name="id", hidden)
+				form(id="changeKanji", method="POST", enctype="multipart/form-data")
+					button(type="submit") go!
+				img#modIcon(src="../images/pan-icon.png", style="border: 1px solid #000;")
+				form(id="remove", method="POST", action="/modKanji/remove")
+					button(type="submit") Удалить карточку

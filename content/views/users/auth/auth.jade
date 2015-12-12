@@ -1,0 +1,15 @@
+mixin authForm()
+	p Введите имя пользователя и пароль. Если такого пользователя нет - он будет создан.
+	form#formAuth.auth(method='POST', name='login-form')
+		.form-group
+			label.col-lg-2.control-label(for='input-username') Имя
+			.col-lg-10
+				input#input-username.form-control(name='username', value='name', type='text', placeholder='Имя')
+		.form-group
+			label.col-lg-2.control-label(for='input-password') Пароль
+			.col-lg-10
+				input#input-password.form-control(name='password', value='pass', type='password', placeholder='Пароль')
+		.form-group
+			.col-lg-offset-2.col-lg-10
+				button.btn.btn-primary(type='submit', data-loading-text='Отправляю...') Войти
+				span.help-block.error
