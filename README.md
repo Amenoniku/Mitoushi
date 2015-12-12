@@ -24,6 +24,10 @@
 - Styus
 
 ###Установка
+##### Клонирование репозитория
+```
+git clone https://github.com/Amenoniku/Mitoushi.git
+```
 ##### Установка `NodeJS`
 
 - Перейти по [ссылке](https://nodejs.org/), скачать последнюю версию и установить
