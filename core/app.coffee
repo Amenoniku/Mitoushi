@@ -16,7 +16,7 @@ renderKanji  =    require "./routes/renderKanji"
 users        =          require "./routes/users"
 
 ### Пример для БД ###
-require "./database"
+# require "./database"
 
 app = do express
 
